@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Reelify - A Reels Web App
 
-## Getting Started
+Reelify is a modern web application that allows users to post and share reels of themselves. Built with Next.js, it features authentication via NextAuth and uses MongoDB as the database.
 
-First, run the development server:
+## 🚀 Features
+- User authentication using **NextAuth**
+- Secure password handling with **bcryptjs**
+- Reels posting and management
+- Responsive UI with **TailwindCSS & DaisyUI**
+- Media storage and optimization using **ImageKit**
+- Database integration with **MongoDB & Mongoose**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🛠 Tech Stack
+- **Frontend:** Next.js, React, TailwindCSS, DaisyUI, Lucide-React
+- **Backend:** Next.js API routes, Mongoose, MongoDB
+- **Authentication:** NextAuth.js
+- **Media Storage:** ImageKit
+- **Other Libraries:** React Hook Form, ESLint, TypeScript
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📦 Installation
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/yourusername/reelify.git
+   cd reelify
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Set up environment variables in `.env.local`:
+   ```sh
+   NEXTAUTH_SECRET=your_secret
+   NEXTAUTH_URL=http://localhost:3000
+   DATABASE_URL=mongodb+srv://your_mongo_db_url
+   IMAGEKIT_PUBLIC_KEY=your_public_key
+   IMAGEKIT_PRIVATE_KEY=your_private_key
+   IMAGEKIT_URL_ENDPOINT=your_imagekit_endpoint
+   ```
+4. Run the development server:
+   ```sh
+   npm run dev
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🔧 Scripts
+- **Development:** `npm run dev`
+- **Build:** `npm run build`
+- **Start:** `npm run start`
+- **Lint:** `npm run lint`
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📌 Live Demo
+[Reelify Live](https://reelify-ivory.vercel.app/)
 
-## Learn More
+## Images
+![image](https://github.com/user-attachments/assets/e8b9ea6a-8511-40f7-8368-fb3093f66098)
+![image](https://github.com/user-attachments/assets/f0982d48-90fa-4ff9-8373-738bf219b729)
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
