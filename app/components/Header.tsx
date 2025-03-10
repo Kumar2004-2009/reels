@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useSession, signOut } from "next-auth/react";
-import { Home, User } from "lucide-react";
+import { Home, User, StepBack } from "lucide-react";
 import { useNotification } from "./Notification";
 
 export default function Header() {
@@ -21,25 +21,35 @@ export default function Header() {
   return (
     <div className="navbar bg-base-300 sticky top-0 z-40 shadow-md">
       <div className="container mx-auto flex justify-between items-center h-16 px-4">
-        {/* Left Side - Logo */}
-        <div className="flex items-center gap-2">
+        {/* Left Side - Back Arrow & Logo */}
+        <div className="flex items-center gap-4">
+          {/* StepBack Link */}
+          <Link
+            href="https://imagin-x-e83g.vercel.app/home"
+            className="flex items-center gap-2 text-xl font-bold text-white hover:text-gray-300 transition-colors mr-4"
+            prefetch={true}
+            onClick={() => showNotification("Returning to Main Page", "info")}
+          >
+            <StepBack className="w-6 h-6" />
+          </Link>
+
+          {/* Reelify Logo */}
           <Link
             href="/"
-            className="btn btn-ghost text-xl flex items-center gap-2 normal-case font-bold"
+            className="btn btn-ghost gap-2 text-2xl font-bold text-white hover:text-gray-300 transition-colors"
             prefetch={true}
-            onClick={() =>
-              showNotification("Welcome to Reelify", "info")
-            }
+            onClick={() => showNotification("Returning to Home", "info")}
           >
             <Home className="w-6 h-6 pl-2" />
             <span className="pr-2">Reelify</span>
           </Link>
         </div>
 
+
         {/* Right Side - Profile Icon */}
         <div className="flex items-center">
           <div className="dropdown dropdown-end">
-            <div
+          <div
               tabIndex={0}
               role="button"
               className="btn btn-ghost btn-circle flex items-center justify-center"
